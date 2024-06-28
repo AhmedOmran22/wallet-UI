@@ -15,12 +15,12 @@ class CustomButton extends StatelessWidget {
     return Column(
       children: [
         Card(
-          elevation: 10,
+          elevation: 2,
           child: Container(
             padding: const EdgeInsets.all(12),
             width: MediaQuery.of(context).size.width * .22,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(016),
               color: Colors.white,
             ),
             child: Image.asset(imagePath),

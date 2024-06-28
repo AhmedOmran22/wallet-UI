@@ -14,7 +14,7 @@ class MyCard extends StatelessWidget {
   final int cardNum;
   final int month;
   final int year;
-  final dynamic color;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -29,14 +29,24 @@ class MyCard extends StatelessWidget {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          const Text(
-            textAlign: TextAlign.left,
-            'Balance',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 18,
-            ),
+          Row(
+            children: [
+              const Text(
+                textAlign: TextAlign.left,
+                'Balance',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                ),
+              ),
+              const Spacer(),
+              Image.asset(
+                'assets/images/visa.png',
+                height: 50,
+              )
+            ],
           ),
           const SizedBox(height: 10),
           Text(
@@ -44,6 +54,7 @@ class MyCard extends StatelessWidget {
             style: const TextStyle(
               color: Colors.white,
               fontSize: 32,
+              fontWeight: FontWeight.bold,
             ),
           ),
           const SizedBox(height: 30),
